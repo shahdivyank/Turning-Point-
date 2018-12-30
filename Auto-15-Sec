@@ -1,4 +1,5 @@
 //5 Point Autonomous Mode ( 2 Points Cap, 1 Point Low Flag, 2 Points Middle Flag)
+//http://cdn.robotc.net/pdfs/natural-language/Natural_Language_Cortex.pdf
 //Time and Speed Have to Be Calibrated Accordingly 
 //Port 1 and Port 2 Are Desginated for Wheels 
 //Port 1 = Left Back Wheel (Looking From Front View)
