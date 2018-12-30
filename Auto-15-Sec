@@ -1,3 +1,4 @@
+//5 Point Autonomous Mode ( 2 Points Cap, 1 Point Low Flag, 2 Points Middle Flag)
 //Time and Speed Have to Be Calibrated Accordingly 
 //Port 1 and Port 2 Are Desginated for Wheels 
 //Port 1 = Left Back Wheel (Looking From Front View)
