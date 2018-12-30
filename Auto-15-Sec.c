@@ -6,39 +6,42 @@
 //Port 2 = Right Back Wheel (Looking From Front View)
 
 task main() {
-  startMotor(port1, 63);  //Moves Straight to Aim for Cap of Opposite Color 
-  startMotor(port2, 63);
+  motor[port1] = 63;  //Moves Straight to Aim for Cap of Opposite Color 
+  motor[port2] = 63;
   wait1Msec(2000);
-  stopMotor(port1);
-  stopMotor(port2);
+  motor[port1] = 0;  
+  motor[port2] = 0;
   
   motorflip();            //Puts Cap On Right Color 
   
-  startMotor(port1, -63);  //Turns Robot 180 Degrees and Places it in Front of the Pole 
-  startMotor(port2, 63);
+  motor[port1] = -63;  //Turns Robot 180 Degrees and Places it in Front of the Pole 
+  motor[port2] = 63;
   wait1Msec(2000);
-  stopMotor(port1);
-  stopMotor(port2);
+  motor[port1] = 0;  
+  motor[port2] = 0;
   
   liftup();               //Lifts the Slides
   
-  startMotor(port1, 63);  //Moves Straight Towards Pole  
-  startMotor(port2, 63);
+ 	motor[port1] = 63;  //Moves Straight Towards Pole  
+  motor[port2] = 63;
   wait1Msec(3000);
-  stopMotor(port1);
-  stopMotor(port2);
+  motor[port1] = 0;  
+  motor[port2] = 0;
   
   liftdown();             //Brings Down the Lift
   
-  startMotor(port1, 45);  //Places Robot Aligned with Flag Poles With Back Facing It
-  startMotor(port2, -45);
+  motor[port1] = 45);  //Places Robot Aligned with Flag Poles With Back Facing It
+  motor[port2] = -45);
   wait1Msec(1000);
-  stopMotor(port1);
-  stopMotor(port2);
+  motor[port1] = 0;  
+  motor[port2] = 0;
   
   flywheel();             //Hits the Middle or High Flag with the Preload
   
-  startMotor(port1, 63);  //Hits the Lowest Level Flag
-  startMotor(port2, 63);
+  motor[port1] = 63;  //Hits the Lowest Level Flag
+  motor[port2] = 63;
+	wait1Msec(3000);
+	motor[port1] = 0;  
+  motor[port2] = 0;
   
 ]
