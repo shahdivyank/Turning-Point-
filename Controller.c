@@ -1,3 +1,5 @@
+//Shaft Encoder Motor Needs to Be Reversed
+
 //Flywheel Slowing Down 
 void FlywheelSlowDown(){
 	while(motor[port5] > 10 && motor[port6] > 10){			//Condition for Motor To Slow Down 
