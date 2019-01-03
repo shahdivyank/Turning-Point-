@@ -26,7 +26,7 @@ void FlywheelSlowDown(){
 void FlywheelSpeedUp(){
 	motor[port5] = 127;
 	motor[port6] = 127;
-	motor[port7] = 63;
+	motor[port7] = 127;
 	if(vexRT[Btn6D] == 0){		//Once Button 6 Down is Released, the Flywheel Begins to Slow Down 
 		FlywheelSlowDown();
 		}
@@ -35,8 +35,8 @@ void FlywheelSpeedUp(){
 //Chain Lift Moving to High Pole 
 void LiftUpHigh(){		//Will Move Elevator Lift to the Correct Height of TALL Pole
 	while(SensorValue[potentiometer] != 200){
-		motor[port3] = 63;
-		motor[port4] = 63;
+		motor[port3] = 127;
+		motor[port4] = 127;
 	}
 	motor[port3] = 0;
 	motor[port4] = 0;
@@ -46,12 +46,12 @@ void LiftUpHigh(){		//Will Move Elevator Lift to the Correct Height of TALL Pole
 void LiftUpLow(){		//Will Move Elevator Lift to the Correct Height of LOW Pole
 	while(SensorValue[potentiometer] != 100){
 		if(SensorValue[potentiometer] > 100){
-			motor[port3] = -63;
-			motor[port4] = -63;
+			motor[port3] = -127;
+			motor[port4] = -127;
 		}
 		else{
-			motor[port3] = 63;
-			motor[port4] = 63;
+			motor[port3] = 127;
+			motor[port4] = 127;
 		}
 	}
 	motor[port3] = 0;
@@ -61,8 +61,8 @@ void LiftUpLow(){		//Will Move Elevator Lift to the Correct Height of LOW Pole
 //Chain Lift Moving Down 
 void LiftDown(){
 	while(SensorValue[potentiometer] != 0){
-		motor[port3] = -63;
-		motor[port4] = -63;
+		motor[port3] = -127;
+		motor[port4] = -127;
 	}
 	motor[port3] = 0;
 	motor[port4] = 0;
